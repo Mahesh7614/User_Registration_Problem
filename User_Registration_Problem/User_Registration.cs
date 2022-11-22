@@ -75,7 +75,7 @@ namespace User_Registration_Problem
         {
             Console.WriteLine("Enter Password Contains 8 Characters : ");
             string password = Console.ReadLine();
-            Regex pass = new Regex(@"^[a-zA-Z0-9]{8}$");
+            Regex pass = new Regex("^[A-za-z0-9]{8,}");
             bool matches = pass.IsMatch(password);
             if (matches == true)
             {
