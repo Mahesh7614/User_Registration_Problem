@@ -6,7 +6,7 @@
         {
             Console.Write("Enter Email Id Given in Chart : ");
             string email = Console.ReadLine();
-            User_Registration.Pattern(email);
+            User_Registration.SampleEmail(email);
         }
     }
 }
