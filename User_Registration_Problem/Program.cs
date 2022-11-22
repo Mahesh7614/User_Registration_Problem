@@ -4,9 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter Email Id Given in Chart : ");
-            string email = Console.ReadLine();
-            User_Registration.SampleEmail(email);
+            User_Registration user = new User_Registration();
+            //Console.Write("Enter First Name : ");
+            //string firstName = Console.ReadLine();
+            user.FirstNameAndLastName("Mahesh");
+            //Console.Write("Enter Email Id Given in Chart : ");
+            //string email = Console.ReadLine();
+            //user.SampleEmail(email);
         }
     }
 }
