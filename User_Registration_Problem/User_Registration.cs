@@ -8,8 +8,8 @@ namespace User_Registration_Problem
     {
         public void FirstNameAndLastName(string Name)
         {
-            Regex email = new Regex(@"^([A-z]{1}[a-z]{2,})$");
-            bool matches = email.IsMatch(Name);
+            Regex firstLastName = new Regex(@"^([A-z]{1}[a-z]{2,})$");
+            bool matches = firstLastName.IsMatch(Name);
 
             if (matches == true)
             {
