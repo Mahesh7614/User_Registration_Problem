@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using System.Xml.Linq;
 
 
 namespace User_Registration_Problem
@@ -36,6 +37,24 @@ namespace User_Registration_Problem
             {
                 Console.WriteLine($"Please Enter Valid Name {Name}");
                 UserInputName();
+            }
+        }
+        public void Email()
+        {
+            Console.Write("Enter Email ID : ");
+            string email = Console.ReadLine();
+            Regex emailID = new Regex(@"^(abc)[a-zA-Z0-9_\+\-\.]*[@](bl)*[.](co)*[.][a-z]{2}$");
+            bool matches = emailID.IsMatch(email);
+            if (matches == true)
+            {
+                pass = true;
+                Console.WriteLine($"{email} is Valid Email");
+                return;
+            }
+            else
+            {
+                Console.WriteLine($"Please Enter Valid Email {email}");
+                Email();
             }
         }
     }
