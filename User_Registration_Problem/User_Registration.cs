@@ -47,9 +47,7 @@ namespace User_Registration_Problem
             bool matches = emailID.IsMatch(email);
             if (matches == true)
             {
-                pass = true;
                 Console.WriteLine($"{email} is Valid Email");
-                return;
             }
             else
             {
@@ -65,14 +63,28 @@ namespace User_Registration_Problem
             bool matches = number.IsMatch(mobileNumber);
             if (matches == true)
             {
-                pass = true;
                 Console.WriteLine($"{mobileNumber} is Valid Mobile Number");
-                return;
             }
             else
             {
                 Console.WriteLine($"Please Enter Valid Mobile Number {mobileNumber}");
                 MobileNumber();
+            }
+        }
+        public void PassWord()
+        {
+            Console.WriteLine("Enter Password Contains 8 Characters : ");
+            string password = Console.ReadLine();
+            Regex pass = new Regex(@"^[a-zA-Z0-9]{8}$");
+            bool matches = pass.IsMatch(password);
+            if (matches == true)
+            {
+                Console.WriteLine($"{password} is Valid Password");
+            }
+            else
+            {
+                Console.WriteLine($"Please Enter Valid Password {password}");
+                PassWord();
             }
         }
     }
