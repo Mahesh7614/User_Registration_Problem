@@ -5,8 +5,9 @@
         static void Main(string[] args)
         {
             User_Registration user = new User_Registration();
-            user.UserInputName();
-            user.Email();
+            //user.UserInputName();
+            //user.Email();
+            user.MobileNumber();
         }
     }
 }
